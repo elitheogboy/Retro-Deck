@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Browse your NES collections and download one game at a time for Retro Deck.">
+<title>Retro Deck Cloud</title>
+<link rel="stylesheet" href="style.css">
+<script src="catalog.js" defer></script>
+</head>
+<body>
+<header><a href="./" class="brand"><span class="brand-icon" aria-hidden="true">▰</span> RETRO DECK <span class="cloud">CLOUD</span></a><a class="download apk" href="downloads/Retro-Deck.apk" download>↓ Download Retro Deck</a></header>
+<main>
+<section class="hero">
+<div class="eyebrow">THE GAME SHELF</div>
+<h1>Pick your next game.</h1>
+<p>Browse your NES collections, get the details, and download just the game you want.</p>
+</section>
+<section class="browser" aria-labelledby="catalog-title">
+<div class="toolbar">
+ <div class="catalog-label"><h2 id="catalog-title">Game catalog</h2><span id="count" role="status"></span></div>
+ <label><span class="sr">Search games</span><input id="query" type="search" placeholder="Search games…" autocomplete="off"></label>
+</div>
+<nav class="filters" aria-label="Filter by collection" id="filters"></nav>
+<ul id="games" class="games" aria-label="Games"></ul>
+<p class="empty" id="empty" hidden></p>
+</section>
+</main>
+<dialog id="detail" aria-labelledby="game-title">
+ <div class="details">
+ <button type="button" id="close" class="close" aria-label="Close game details">✕</button>
+ <p class="eyebrow" id="game-type"></p>
+ <h2 id="game-title"></h2>
+ <p id="description"></p>
+ <dl id="facts"></dl>
+ <div class="actions"><a id="download" class="download" download>↓ Download game ZIP</a><span id="size"></span></div>
+ <p class="hint">In Retro Deck, use <strong>Import games</strong> and select the downloaded ZIP.</p>
+ <a id="reference" class="reference" target="_blank" rel="noopener">Read more about this game ↗</a>
+ </div>
+</dialog>
+<footer>RETRO DECK CLOUD <span>Game metadata from LaunchBox Games Database where available.</span></footer>
+</body>
+</html>
